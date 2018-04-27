@@ -1,0 +1,15 @@
+PODS:
+  - Canvas (0.1.2)
+  - Hero (1.0.0)
+
+DEPENDENCIES:
+  - Canvas
+  - Hero (~> 1.0)
+
+SPEC CHECKSUMS:
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  Hero: 18e7cf8af41c04c8532d1430ac174004a9365c87
+
+PODFILE CHECKSUM: f4277540b22a29293fc61f58ac92889b73a13f19
+
+COCOAPODS: 1.4.0
