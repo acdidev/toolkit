@@ -12,9 +12,9 @@ class ResultsTableViewController: UITableViewController {
     @IBOutlet var resultTableView: UITableView!
     
     let explanationList = [
-    "If your users know their printing is monitored they will reduce their printing. (i.e. no more holiday photos print-outs). This typically results in a reduction of 10-20%.",
-    "Introducing restrictions can enforce duplex printing, or avoid accidentally printing 100s of pages instead of just one. This typically results in a reduction of 20-30%.",
-    "Enforcing print quotas encourages responsible use of print resources. This typically results in a reduction of 30-50%."
+        "Print Tracking: If your users know their printing is monitored they will reduce their printing. (i.e. no more holiday photos print-outs). This typically results in a reduction of 10-20%.",
+        "Filter/Restrictions: Introducing restrictions can enforce duplex printing, or avoid accidentally printing 100s of pages instead of just one. This typically results in a reduction of 20-30%.",
+        "Print quotas: Enforcing print quotas encourages responsible use of print resources. This typically results in a reduction of 30-50%."
     ]
     
     var explanation = String()

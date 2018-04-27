@@ -40,7 +40,6 @@ extension UINavigationController {
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.isTranslucent = true
     }
-    
     func green(){
         let acdiGreen = UIColor(red: 140/255, green: 198/255, blue: 63/255, alpha: 1)
         self.navigationBar.isTranslucent = false

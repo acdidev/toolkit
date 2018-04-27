@@ -64,6 +64,12 @@ class MainTableViewControllerCommercial: UITableViewController, UITextFieldDeleg
         15
     ]
     
+    let explanationList = [
+        "Print Tracking: If your users know their printing is monitored they will reduce their printing. (i.e. no more holiday photos print-outs). This typically results in a reduction of 10-20%.",
+        "Filter/Restrictions: Introducing restrictions can enforce duplex printing, or avoid accidentally printing 100s of pages instead of just one. This typically results in a reduction of 20-30%.",
+        "Print quotas: Enforcing print quotas encourages responsible use of print resources. This typically results in a reduction of 30-50%."
+    ]
+    
     var outboundIndex = Int()
     var outboundTitle = String()
     var outboundSelections = [String]()
@@ -135,6 +141,12 @@ class MainTableViewControllerCommercial: UITableViewController, UITextFieldDeleg
         if UserDefaults.standard.string(forKey: "timeValueLabel") != nil {
             self.timeValueLabel.text = "\(UserDefaults.standard.string(forKey: "timeValueLabel")!)"
         }
+        
+        if UserDefaults.standard.integer(forKey: "trackingModeIndex") != nil {
+            self.trackingModeIndex = UserDefaults.standard.integer(forKey: "trackingModeIndex")
+        } else {
+            self.trackingModeIndex = 0
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -160,6 +172,7 @@ class MainTableViewControllerCommercial: UITableViewController, UITextFieldDeleg
         UserDefaults.standard.set("\(averageCountColorValueLabel.text!)", forKey: "averageCountColorValueLabel")
         UserDefaults.standard.set("\(trackingModeValueLabel.text!)", forKey: "trackingModeValueLabel")
         UserDefaults.standard.set("\(timeValueLabel.text!)", forKey: "timeValueLabel")
+        UserDefaults.standard.set(trackingModeIndex, forKey: "trackingModeIndex")
         
         if (averageCostBwValueLabel.text != "---" && averageCostColorValueLabel.text != "---" && averageCountBwValueLabel.text != "---" && averageCountColorValueLabel.text != "---") {
             
@@ -193,6 +206,8 @@ class MainTableViewControllerCommercial: UITableViewController, UITextFieldDeleg
             totalPercentageLabel.text = "---"
             detailsButton.alpha = 0
         }
+        
+        self.mainTableView.reloadData()
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -271,6 +286,14 @@ class MainTableViewControllerCommercial: UITableViewController, UITextFieldDeleg
                 outboundSelections = timeSelections
                 performSegue(withIdentifier: "mainToSelection", sender: self)
             }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 2 {
+            return explanationList[trackingModeIndex]
+        } else {
+            return ""
         }
     }
 
