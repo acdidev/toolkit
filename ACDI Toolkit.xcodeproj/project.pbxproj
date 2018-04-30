@@ -30,6 +30,8 @@
 		3762F1F4207DC690003E61FA /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3762F1EC207DC676003E61FA /* CircularStd-Book.otf */; };
 		3762F1F5207DC690003E61FA /* CircularStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3762F1ED207DC67D003E61FA /* CircularStd-BoldItalic.otf */; };
 		3762F1F6207DC690003E61FA /* CircularStd-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3762F1EE207DC685003E61FA /* CircularStd-MediumItalic.otf */; };
+		3768010D209531A400C76B0D /* papercutHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768010C209531A400C76B0D /* papercutHealthViewController.swift */; };
+		376BBAB72096FABF00121A5C /* PCHealthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BBAB62096FABF00121A5C /* PCHealthTableViewController.swift */; };
 		DCBBAA3EE61BCA9EE2BDC69E /* Pods_ACDI_Toolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E17B510454B9B69AB39B20B /* Pods_ACDI_Toolkit.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		3762F1EC207DC676003E61FA /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
 		3762F1ED207DC67D003E61FA /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
 		3762F1EE207DC685003E61FA /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
+		3768010C209531A400C76B0D /* papercutHealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = papercutHealthViewController.swift; sourceTree = "<group>"; };
+		376BBAB62096FABF00121A5C /* PCHealthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCHealthTableViewController.swift; sourceTree = "<group>"; };
 		6AA889FB091BB4A44C9592F3 /* Pods-ACDI Toolkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACDI Toolkit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACDI Toolkit/Pods-ACDI Toolkit.release.xcconfig"; sourceTree = "<group>"; };
 		8964C0870DA281FDB4D7D117 /* Pods-ACDI Toolkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACDI Toolkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACDI Toolkit/Pods-ACDI Toolkit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,8 @@
 				37241021208F788100A51D96 /* GetQuoteViewController.swift */,
 				37305F92207671B20080CF48 /* Assets.xcassets */,
 				37305FAF2077423A0080CF48 /* Launch Screen.storyboard */,
+				3768010C209531A400C76B0D /* papercutHealthViewController.swift */,
+				376BBAB62096FABF00121A5C /* PCHealthTableViewController.swift */,
 			);
 			path = "ACDI Toolkit";
 			sourceTree = "<group>";
@@ -256,11 +262,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ACDI Toolkit/Pods-ACDI Toolkit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Canvas/Canvas.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Canvas.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,11 +299,13 @@
 			files = (
 				37241022208F788100A51D96 /* GetQuoteViewController.swift in Sources */,
 				37305FAE207726270080CF48 /* ResultsTableViewController.swift in Sources */,
+				376BBAB72096FABF00121A5C /* PCHealthTableViewController.swift in Sources */,
 				37305FA62076B0310080CF48 /* SelectionTableViewControllerEducation.swift in Sources */,
 				37305FA42076AF2F0080CF48 /* MainTableViewControllerEducation.swift in Sources */,
 				37305FA2207684790080CF48 /* SelectionTableViewCell.swift in Sources */,
 				37305FAA207713430080CF48 /* HomeViewController.swift in Sources */,
 				37305F9E207679F40080CF48 /* MainTableViewControllerCommercial.swift in Sources */,
+				3768010D209531A400C76B0D /* papercutHealthViewController.swift in Sources */,
 				37305FA82076B5C80080CF48 /* Designables.swift in Sources */,
 				37305F8C207671B20080CF48 /* AppDelegate.swift in Sources */,
 				37305FAC207714570080CF48 /* CategoryViewController.swift in Sources */,
@@ -439,8 +449,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acdi.tkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "74c91010-c493-41c8-afc7-cf5d72158200";
-				PROVISIONING_PROFILE_SPECIFIER = "ACDI Toolkit (provisioning profile)";
+				PROVISIONING_PROFILE = "543d366e-4594-489b-8821-018c1acdbac4";
+				PROVISIONING_PROFILE_SPECIFIER = "ACDI ToolKit Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,8 +470,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acdi.tkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "74c91010-c493-41c8-afc7-cf5d72158200";
-				PROVISIONING_PROFILE_SPECIFIER = "ACDI Toolkit (provisioning profile)";
+				PROVISIONING_PROFILE = "543d366e-4594-489b-8821-018c1acdbac4";
+				PROVISIONING_PROFILE_SPECIFIER = "ACDI ToolKit Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

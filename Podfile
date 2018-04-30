@@ -6,8 +6,7 @@ target 'ACDI Toolkit' do
   use_frameworks!
 
   # Pods for ACDI Toolkit
-
   pod 'Canvas'
   pod 'Hero', '~> 1.0'
-
+  pod 'SwiftyJSON'
 end

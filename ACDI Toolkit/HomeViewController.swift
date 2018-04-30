@@ -32,6 +32,19 @@ class HomeViewController: UIViewController {
             UIApplication.shared.openURL(url)
         }
     }
+    
+    @IBAction func onPaperCutDemo(_ sender: Any) {
+        let url = URL(string: "http://papercut.com/demo")!
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    
+    
+    
 }
 
 extension UINavigationController {
